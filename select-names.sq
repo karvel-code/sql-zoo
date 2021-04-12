@@ -1,0 +1,42 @@
+/*CHECKS FOR MATCHING PATTERNS */
+/*Using LIKE 'B%' to find countries starting with  B. The % is a wild-card it can match any characters */
+SELECT name FROM world
+  WHERE name LIKE 'Y%'
+
+/*Select countries ending with y, notice the difference between the two examples. Here, Y comes after the %. */
+SELECT name FROM world
+  WHERE name LIKE '%y'
+
+/* Select countries with an x as one of the characters. Finding countries containing the letter x*/
+SELECT name FROM world
+  WHERE name LIKE '%x%'
+
+/*Selecting countries that are ending with 'land'.*/
+SELECT name FROM world
+  WHERE name LIKE '%land'
+
+/*Selecting countries that start with 'C' and end with 'ia'*/
+SELECT name FROM world
+  WHERE name LIKE 'C%' 
+  AND name LIKE '%ia'
+
+/*Selecting countries that have double oo' */
+SELECT name FROM world
+  WHERE name LIKE '%oo%'
+
+/*Selecting countries that have three 'a's that are not following one another eg 'aaa' */
+SELECT name FROM world
+  WHERE name LIKE '%a%a%a%'
+
+/* Selecting a country that have t as their second character' Underscore is used as a single character wild card*/
+SELECT name FROM world
+ WHERE name LIKE '_t%'
+ORDER BY name
+
+/*Selecting countries that have an o seperated by two characters eg Lesotho */
+SELECT name FROM world
+ WHERE name LIKE '%o__o%'
+
+/*Selecting countries with four characters only eg, Togo, Cuba */
+SELECT name FROM world
+ WHERE name LIKE '____'
