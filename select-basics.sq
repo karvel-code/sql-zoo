@@ -1,0 +1,11 @@
+/* Show the population of Germany from the table world */
+SELECT population FROM world
+  WHERE name = 'Germany'
+
+/* Checking a list using the word 'IN' The result will return name and population table from the world table */
+SELECT name, population FROM world
+  WHERE name IN ('Sweden', 'Norway', 'Denmark');
+
+/*Checking a range using 'BETWEEN'. Result will return the name and area ranging from 200000 and 250000.*/
+SELECT name, area FROM world
+  WHERE area BETWEEN 200000 AND 250000
